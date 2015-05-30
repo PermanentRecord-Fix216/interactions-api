@@ -54,6 +54,8 @@ __Errors__
 
 ##GET /interactions/
 
+__Response__  
+```
 { 
   "data":
     {
@@ -92,10 +94,13 @@ __Errors__
 
 ##POST /interactions/
   
-__parameters__  
+__Parameters__  
 The following optional parameters are accepted for logging:
 
 "incident_type", "incident_location", "incident_duration", "incident_time", "incident_date", "incident_impact", "incident_urgency", "incident_priority", "incident_rating", "incident_frequency", "incident_media", "incident_attachments", "incident_event_association", "incident_witness", "public_servant_name", "public_servant_id", "public_servant_age", "public_servant_sex", "public_servant_race", "public_servant_organization", "public_servant_behavior", "public_servant_use_force", "public_servant_charge_citation", "reporter_name", "reporter_phone", "reporter_race", "reporter_sex", "reporter_age", "reporter_disable_status", "reporter_zip_code", "reporter_comment",
+
+__Response__ 
+201, object in question  
 
 __Errors__  
 401, 422  
