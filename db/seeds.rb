@@ -6,26 +6,27 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 #
+def sex
+  ['male','female','other'].sample
+end
 
-10.times do
-  Customer.create(
-    contact_person: Faker::Name.name,
+def zip_code
+  %w(44101 44105 44114 44111).sample
+end
+
+30.times do
+  Interaction.create(
+    officer_name: Faker::Name.name,
+    officer_badge: Faker::Lorem.characters(5),
     organization: Faker::Company.name,
-    cc_number: Faker::Business.credit_card_number,
-    cc_expire_date: Faker::Business.credit_card_expiry_date,
-    cc_type: Faker::Business.credit_card_type,
-    primary_phone: Faker::PhoneNumber.cell_phone,
-    primary_email: Faker::Internet.email
+    zip_code: zip_code,
+    reporter_name: Faker::Name.name,
+    reporter_sex: sex,
+    reporter_phone: Faker::PhoneNumber.cell_phone,
+    reporter_age: rand(16..75),
+    comment: Faker::Lorem.sentence,
+    status: Faker::Lorem.word
   )
 end
 
-20.times do
-  Location.create(
-    customer_id: rand(1..10),
-    address_1: Faker::Address.street_address,
-    address_2: Faker::Address.secondary_address,
-    city: Faker::Address.city,
-    state: Faker::Address.state_abbr,
-    zip_code: Faker::Address.zip_code,
-  )
-end
+

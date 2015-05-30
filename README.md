@@ -83,7 +83,6 @@ __Response__
       "reporter_disable_status": "Wheelchair"
       "reporter_zip_code": 44114
       "reporter_comment": "Officer Jonh is a great guy. Even gave me a high-five!"
-      
     }
 }
 

@@ -1,11 +1,11 @@
 module Api
   module V1
     class InteractionsController < ApplicationController
-      before_action :get_user, except: [:index, :create]
+      before_action :get_interaction, except: [:index, :create, :search]
 
       def index
-        customers = Interactions.all
-        render json: customers, 
+        interactions = Interaction.last(50)
+        render json: interactions,
                status: :ok,
                each_serializer: InteractionSerializer,
                root: 'data'
@@ -16,33 +16,43 @@ module Api
                status: :ok,
                serializer: InteractionSerializer,
                root: 'data'
-
-        #render 404 if not found
       end
 
       def create
-        interaction = Interaction.create(customer_params)
-        render nothing: true, status: :created
+        interaction = Interaction.create(interaction_params)
+        render json: interaction, status: :created
       end
 
-      def update
-        interaction = Interaction.update_attributes(params)
-        render json: interaction, status: :accepted
-      end
+      def search
+        interactions = Interaction.by_officer_name(params[:officer_name]) if params[:officer_name].present?
+        interactions = Interaction.by_zip_code(params[:zip_code]) if params[:zip_code].present?
+        interactions = Interaction.by_reporter_sex(params[:sex]) if params[:sex].present?
+        interactions = Interaction.by_date(params[:start_date],params[:end_date]) if dates_present?
 
-      def destroy
-        @interaction.destroy
-        render nothing: true, status: :accepted
+        render json: interactions,
+               status: :ok,
+               each_serializer: InteractionSerializer,
+               root: 'data'
       end
 
       private
 
-      def get_user
+      def get_interaction
         @interaction = Interaction.find(params[:id])
       end
 
+      def dates_present?
+        [params[:start_date], params[:end_date]].all? { |p| p.present? }
+      end
+
       def interaction_params
-        params.permit(:badge_num, :comment, :zip_code)
+        params.permit(
+          :officer_badge, :zip_code,
+          :officer_name, :organization, :comment,
+          :reporter_name, :reporter_phone,
+          :reporter_race, :reporter_sex, :reporter_age,
+          :status
+        )
       end
     end
   end
