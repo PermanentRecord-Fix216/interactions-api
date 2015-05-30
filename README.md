@@ -48,19 +48,29 @@ __Response__
 
 ```
 
-__Errors__
+__Errors__  
 404, 401
 
 ##POST /interactions/
-__parameters__
-The following parameters are accepted for logging:
+  
+__parameters__  
+The following optional parameters are accepted for logging:
 
 "incident_type", "incident_location", "incident_duration", "incident_time", "incident_date", "incident_impact", "incident_urgency", "incident_priority", "incident_rating", "incident_frequency", "incident_media", "incident_attachments", "incident_event_association", "incident_witness", "public_servant_name", "public_servant_id", "public_servant_age", "public_servant_sex", "public_servant_race", "public_servant_organization", "public_servant_behavior", "public_servant_use_force", "public_servant_charge_citation", "reporter_name", "reporter_phone", "reporter_race", "reporter_sex", "reporter_age", "reporter_disable_status", "reporter_zip_code", "reporter_comment",
 
+__Errors__  
+401, 422  
+
 ##GET/interactions/search
-_list comma separated parameters here_  
+
+__current__  
+"officer_name" - (string)  
+"zip_code" - (string)  
+"start_date" && "end_date" - (string, "2015-05-30 18:50:27") - both are required if used    
+"reporter_sex" - (male, female, other)  
+
+__desired__  
 "incident_type", "reporter_name", "public_servant_name", "incident_location", "incident_time", "incident_date", "incident_media", "incident_impact", "incident_urgency", "incident_priority", "incident_event_association", "incident_rating", "public_servant_organization", "reporter_race", "reporter_age", "reporter_sex", "reporter_zip_code", "reporter_comment"
 
-
-__Errors__
-401, 422
+__Errors__  
+[] - empty set if no items found  
