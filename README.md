@@ -57,10 +57,10 @@ The following parameters are accepted for logging:
 
 "incident_type", "incident_location", "incident_duration", "incident_time", "incident_date", "incident_impact", "incident_urgency", "incident_priority", "incident_rating", "incident_frequency", "incident_media", "incident_attachments", "incident_event_association", "incident_witness", "public_servant_name", "public_servant_id", "public_servant_age", "public_servant_sex", "public_servant_race", "public_servant_organization", "public_servant_behavior", "public_servant_use_force", "public_servant_charge_citation", "reporter_name", "reporter_phone", "reporter_race", "reporter_sex", "reporter_age", "reporter_disable_status", "reporter_zip_code", "reporter_comment",
 
-GET/interactions/search:
-
+##GET/interactions/search
+_list comma separated parameters here_  
 "incident_type", "reporter_name", "public_servant_name", "incident_location", "incident_time", "incident_date", "incident_media", "incident_impact", "incident_urgency", "incident_priority", "incident_event_association", "incident_rating", "public_servant_organization", "reporter_race", "reporter_age", "reporter_sex", "reporter_zip_code", "reporter_comment"
-_list comma separated parameters here_
+
 
 __Errors__
 401, 422
