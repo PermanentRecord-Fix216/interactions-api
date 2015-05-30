@@ -8,7 +8,9 @@ __Response__
 ```
 { 
   "data": [
-    { 
+    {
+      "id": 10
+      "types": "interactions" 
       "incident_type": "Traffic Patrol"
       "incident_location": "gps log/address"
       "incident_duration": "01:34:00"
@@ -42,7 +44,45 @@ __Response__
       "reporter_comment": "Officer Jonh is a great guy. Even gave me a high-five!"
       
     },
+  ]
+}
 
+```
+
+__Errors__  
+404, 401
+
+##GET /interactions/
+
+{ 
+  "data":
+    {
+      "id": 123
+      "types": "interactions"
+      "incident_type": "Traffic Patrol"
+      "incident_location": "gps log/address"
+      "incident_duration": "01:34:00"
+      "incident_time": "3:40 PM"
+      "incident_date": "06-25-2015"
+      "incident_impact": "Single Person"
+      "incident_urgency": "immidiate"
+      "incident_priority": "low"
+      "incident_rating": 8
+      "incident_frequency": "isolated"
+      "incident_media": "cop_selfie.jpg"
+      "incident_attachments":"Report.pdf"
+      "incident_event_association": "rockin in the park 2015"
+      "incident_witness": "Jerry Jams"
+      "reporter_name": "Johan Davies"
+      "reporter_phone": 216-555-5555
+      "reporter_race": "Native American"
+      "reporter_sex":"Male"
+      "reporter_age":35
+      "reporter_disable_status": "Wheelchair"
+      "reporter_zip_code": 44114
+      "reporter_comment": "Officer Jonh is a great guy. Even gave me a high-five!"
+      
+    }
 }
 
 ```
