@@ -11,29 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150501030957) do
+ActiveRecord::Schema.define(version: 20150501030327) do
 
-  create_table "customers", force: :cascade do |t|
-    t.string   "contact_person"
+  create_table "interactions", force: true do |t|
+    t.string   "officer_name"
+    t.string   "officer_badge"
     t.string   "organization"
-    t.string   "cc_number"
-    t.string   "cc_expire_date"
-    t.string   "cc_type"
-    t.string   "primary_phone"
-    t.string   "primary_email"
+    t.string   "zip_code"
+    t.text     "comment"
+    t.string   "reporter_name"
+    t.string   "reporter_phone"
+    t.string   "reporter_race"
+    t.string   "reporter_sex"
+    t.string   "reporter_age"
+    t.string   "status"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
-  end
-
-  create_table "locations", force: :cascade do |t|
-    t.integer  "customer_id"
-    t.string   "address_1"
-    t.string   "address_2"
-    t.string   "city"
-    t.string   "state"
-    t.string   "zip_code"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
   end
 
 end
