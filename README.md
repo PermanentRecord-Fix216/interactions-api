@@ -109,9 +109,9 @@ __Errors__
 
 __current__  
 "officer_name" - (string)  
-"zip_code" - (string)  
+"officer_badge" - (string)  
 "start_date" && "end_date" - (string, "2015-05-30 18:50:27") - both are required if used    
-"reporter_sex" - (male, female, other)  
+"zip_code" - (string)  
 
 __desired__  
 "incident_type", "reporter_name", "public_servant_name", "incident_location", "incident_time", "incident_date", "incident_media", "incident_impact", "incident_urgency", "incident_priority", "incident_event_association", "incident_rating", "public_servant_organization", "reporter_race", "reporter_age", "reporter_sex", "reporter_zip_code", "reporter_comment"
