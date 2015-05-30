@@ -1,7 +1,6 @@
-#Interactions API
-(Permanent Record)
+#Interactions API (Permanent Record)
 
-The goal of this RESTful JSON API is to help community organizations and citizens to provide a _permanent record_ of police interactions within the Cleveland area. It conforms to the [JSON API Spec](http://jsonapi.org/).
+The goal of this RESTful JSON API is to assist community organizations and citizens with keeping a safe, transparent, and _permanent record_ of police interactions within the Cleveland area. It conforms to the [JSON API Spec](http://jsonapi.org/).
 
 ##GET /interactions/
 
