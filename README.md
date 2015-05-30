@@ -1,7 +1,7 @@
 #Interactions API
 (Permanent Record)
 
-The goal of this RESTful JSON API is to help community organizations and citizens to provide a _permanent record_ of police interactions within the Cleveland area. It conforms to [JSON API](http://jsonapi.org/)
+The goal of this RESTful JSON API is to help community organizations and citizens to provide a _permanent record_ of police interactions within the Cleveland area. It conforms to the [JSON API Spec](http://jsonapi.org/).
 
 ##GET /interactions/
 
@@ -52,7 +52,10 @@ __Errors__
 404, 401
 
 ##POST /interactions/
-`/interactions/?badge_num="124"&zip_code="44101"&v="v1"`
+__parameters__
+The following parameters are accepted for logging:
+
+_list comma separated parameters here_
 
 __Errors__
 401, 422
