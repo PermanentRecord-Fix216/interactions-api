@@ -1,7 +1,7 @@
 #Interactions API
 (Permanent Record)
 
-The goal of this RESTful JSON API is to help community organizations and citizens to provide a _permanent record_ of police interactions within the Cleveland area.
+The goal of this RESTful JSON API is to help community organizations and citizens to provide a _permanent record_ of police interactions within the Cleveland area. It conforms to [JSON API](http://jsonapi.org/)
 
 ##GET /interactions/
 
@@ -10,15 +10,40 @@ __Response__
 { 
   "data": [
     { 
-      "badge_num": 1234,
-      "zip_code": 44114,
-      "comment": "Officer Greg is a great guy"
+      "incident_type": "Traffic Patrol"
+      "incident_location": "gps log/address"
+      "incident_duration": "01:34:00"
+      "incident_time": "3:40 PM"
+      "incident_date": "06-25-2015"
+      "incident_impact": "Single Person"
+      "incident_urgency": "immidiate"
+      "incident_priority": "low"
+      "incident_rating": 8
+      "incident_frequency": "isolated"
+      "incident_media": "cop_selfie.jpg"
+      "incident_attachments":"Report.pdf"
+      "incident_event_association": "rockin in the park 2015"
+      "incident_witness": "Jerry Jams"
+      "public_servant_name": "John Wayne"
+      "public_servant_id": 1234,
+      "public_servant_age": 45
+      "public_servant_sex": "Male"
+      "public_servant_race": "White"
+      "public_servant_organization": "CDP"
+      "public_servant_behavior": "Nice"
+      "public_servant_use_force": "No"
+      "public_servant_charge_citation": "J walking"
+      "reporter_name": "Johan Davies"
+      "reporter_phone": 216-555-5555
+      "reporter_race": "Native American"
+      "reporter_sex":"Male"
+      "reporter_age":35
+      "reporter_disable_status": "Wheelchair"
+      "reporter_zip_code": 44114
+      "reporter_comment": "Officer Jonh is a great guy. Even gave me a high-five!"
+      
     },
-    { 
-      "badge_num": 3402,
-      "zip_code": 44101,
-      "comment": "Officer Jim is a horrible guy"
-    }
+
 }
 
 ```
